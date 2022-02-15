@@ -1,4 +1,4 @@
-public class Calculator {
+class Calculator {
 
     public int sum(int num1, int num2){
         /*int number1=num1;
