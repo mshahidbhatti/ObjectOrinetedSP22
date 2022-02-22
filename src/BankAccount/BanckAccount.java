@@ -2,29 +2,49 @@ package BankAccount;
 
 public class BanckAccount {
     //class attribute
+    //class attribute
+    private static int accountCounter;
+
+    //instance specific attributes
     private String firstName;
     private String lastName;
     private double openingBalance;
     private int accountNumber;
-    private String email;
+    private String email="No Email Provided";
+    private Date openingDate;
 
 
-    public BanckAccount(){
-
+/*
+    static{
+        for(int i=0;i<10;i++)
+            System.out.println(i);
     }
+
+    {
+        System.out.println("Welocme to our bank");
+    }
+*/
+
+
+
     //constructor
     // module, no return type, name same as class name
     public BanckAccount(String firstName, String lastName, double openingBalance){
         this.firstName=firstName;
         this.lastName=lastName;
         this.openingBalance=openingBalance;
-        this.accountNumber=this.accountNumber++;
-        this.email="No Email Provided";
+        this.accountNumber=++accountCounter;
+        //print
+
     }
 
-    public BanckAccount(String firstName, String lastName, double openingBalance, String email){
+    //this() is call to default constructor
+    public BanckAccount(String firstName, String lastName, double openingBalance, String email,Date openingDate){
+        //call to four parameters constructor
         this(firstName,lastName,openingBalance);
         this.email=email;
+        this.openingDate=openingDate;
+        //print
     }
 
     public String getFirstName() {
@@ -70,8 +90,8 @@ public class BanckAccount {
 
         //return "Account Number:"+accountNumber+"%nFirst Name: "+firstName+"\n"+"Last Name:"+lastName+
         //        "\n"+"Opening Balance:"+openingBalance+"\n";
-        return String.format("Account Number:%d %n First Name :%s %n Last Name: %s%n Opening Balance: %.2f %n Email %s",getAccountNumber(),
-                this.getFirstName(),getLastName(),getOpeningBalance(),getEmail());
+        return String.format("Account Number:%d %n First Name :%s %n Last Name: %s%n Opening Balance: %.2f %n Email %s%n Opening Date %s",getAccountNumber(),
+                this.getFirstName(),getLastName(),getOpeningBalance(),getEmail(),openingDate);
 
     }
 
@@ -81,5 +101,11 @@ public class BanckAccount {
 
     public void setEmail(String email) {
         this.email = email;
+        //nonSense();
     }
+
+/*    public static void nonSense(){
+        //this.getEmail();
+        System.out.println("Non Sense function");
+    }*/
 }
