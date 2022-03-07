@@ -2,8 +2,8 @@ package BankAccount;
 
 public class Demo {
     public static void main(String[] args) {
-    //    BanckAccount.nonSense();
-      //  BanckAccount ac=new BanckAccount("Muhammad","Abrar",500.0);
+        //   BanckAccount.nonSense();
+        //  BanckAccount ac=new BanckAccount("Muhammad","Abrar",500.0);
 
         BanckAccount account1=new BanckAccount("Muhammad","Abrar",500.0);
         BanckAccount account2=new BanckAccount("Umair","Zafar",1000.0);
