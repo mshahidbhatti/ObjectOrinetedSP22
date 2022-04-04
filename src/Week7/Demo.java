@@ -3,16 +3,31 @@ package Week7;
 public class Demo {
     public static void main(String[] args) {
 
+        //refrence of parent class
+        A obj;
+        //obj=new A();  abstract class can not be instantiated
+
+        obj=new B();
+        //late binding
+       // obj.a();
+
+        //early binding
+       // obj.c();
+
+        System.out.println(obj.x);
+
+        B obj1=new B();
+        System.out.println(obj1.x);
 
 
-        Vehicle[] array=new Vehicle[5];
+/*        Vehicle[] array=new Vehicle[5];
         array[0]=new Bike();
         array[1]=new Car();
         array[2]=new Car();
         array[3]=new Bike();
 
 
-        steerCall(array);
+        steerCall(array);*/
 
     }
 
