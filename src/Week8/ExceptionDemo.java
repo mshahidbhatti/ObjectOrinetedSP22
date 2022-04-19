@@ -11,7 +11,25 @@ public class ExceptionDemo {
 
 
 
+
+        /*try{
+
+        }
+        catch (ArithmeticException | IndexOutOfBoundsException |ClassCastException e){
+
+        }
+        catch (Exception e){
+
+        }
+        finally {
+
+        }*/
+
+
+
         try {
+            //rsky
+            //dependent
             int x=sc.nextInt();
             int y=sc.nextInt();
             System.out.println(x / y);
